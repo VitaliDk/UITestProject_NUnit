@@ -32,7 +32,6 @@ namespace ComponentLibrary.Factories
 
         public IWebDriver GetFirefoxDriver()
         {
-            // Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)
             IWebDriver driver = new FirefoxDriver();
             return driver;
         }

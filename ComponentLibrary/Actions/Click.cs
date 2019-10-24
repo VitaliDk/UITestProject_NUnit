@@ -12,7 +12,7 @@ namespace ComponentLibrary.Actions
         public static void Button(IWebDriver driver, By id)
         {
             _Logger.Info("Attempting to click on button with id: " + id);
-            LogR.Info("New Log Type");
+            LogR.Info($"Attempt to click button with id: {id}");
             Find.Element(driver, id).Click();
         }
 
@@ -29,7 +29,14 @@ namespace ComponentLibrary.Actions
 
         public static void LinkByStringValue(IWebDriver driver, string text)
         {
+            LogR.Info($"Attempt to click link by text: {text}");
             Find.Element(driver, By.LinkText(text)).Click();
+        }
+
+        public static void Element(IWebDriver driver, By screenElement)
+        {
+            LogR.Info($"Attempt to click element with Id:  {screenElement}");
+            Find.Element(driver, screenElement).Click();
         }
     }
 }

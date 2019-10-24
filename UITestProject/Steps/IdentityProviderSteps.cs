@@ -1,10 +1,11 @@
-﻿using TechTalk.SpecFlow;
+﻿using System;
+using TechTalk.SpecFlow;
 using ComponentLibrary.Actions;
 using ComponentLibrary.Screens;
 using NLog;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 using ComponentLibrary.Tasks;
+using ComponentLibrary.Tasks.Orders;
 
 namespace UITests.Steps
 {
@@ -65,19 +66,22 @@ namespace UITests.Steps
 
         }
 
-        [Given(@"the user is logged into the DMI")]
-        public void GivenTheUserIsLoggedIntoTheDMI()
-        {
-            GivenTheUserIsOnTheLoginPage();
-            WhenTheUserAttemptsToLogIn();
-            ThenTheUserIsRedirectedToTheDMI();
-        }
-
-
         [Then(@"the user is shown a validation message explaining that their login attempt was unsuccessful")]
         public void ThenTheUserIsUnsuccessfulInLoggingIntoTheDMI()
         {
             VerifyExistsOnPage.Element(driver, DMILoginPage.InvalidLoginAttemptMessage);
+        }
+
+        [When(@"the user searches for all orders submitted after 1st June 2009")]
+        public void WhenTheUserSearchesForAllOrdersSubmittedAfter1stJun2009()
+        {
+            // PlayStep for now
+            GoTo.OrdersPage(driver);
+            FilterOrdersBySubmittedDate.FromDate(driver, 1, "Jun", "2011");
+            FilterOrdersBySubmittedDate.ToDate(driver, 1, "Oct", "2019");
+            Console.WriteLine(VerifyOrderExists.FindOrder(driver, "2"));
+            //VerifyOrderExists.DoesAnOrderExistOnThePage(driver);
+            //VerifyOrderExists.DmiOrderIdEquals(driver, "1");
         }
     }
 }

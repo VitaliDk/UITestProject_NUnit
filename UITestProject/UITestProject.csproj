@@ -89,7 +89,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\GroupedSteps.cs" />
     <Compile Include="Steps\IdentityProviderSteps.cs" />
+    <Compile Include="Steps\OrderDetailsPageSteps.cs" />
+    <Compile Include="Steps\OrdersPageSteps.cs" />
     <Compile Include="Steps\TestSetup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +100,8 @@
     <Content Include="NLog.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="Features\PostDeploymentUISmokeTests.feature" />
+    <None Include="Features\TestComponentFeature.feature" />
     <None Include="NLog.xsd">
       <SubType>Designer</SubType>
     </None>

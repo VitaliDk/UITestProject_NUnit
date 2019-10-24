@@ -1,4 +1,3 @@
-C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\obj\Debug\ComponentLibrary.csprojAssemblyReference.cache
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\bin\Debug\NLog.config
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\bin\Debug\ComponentLibrary.dll
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\bin\Debug\ComponentLibrary.pdb
@@ -11,3 +10,4 @@ C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\bin\Debug\WebDriver.Supp
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\obj\Debug\ComponentLibrary.csproj.CopyComplete
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\obj\Debug\ComponentLibrary.dll
 C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\obj\Debug\ComponentLibrary.pdb
+C:\Users\danialk\Desktop\NUnitSpecflow\ComponentLibrary\obj\Debug\ComponentLibrary.csprojAssemblyReference.cache
